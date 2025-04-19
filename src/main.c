@@ -9,7 +9,7 @@ int main(int argc, char **argv)
     }
 	if (ft_strcmp(argv[1], "mandelbrot") == 0)
 	{
-		
+		_SC_READER_WRITER_LOCKS
 	}
 	
 }
