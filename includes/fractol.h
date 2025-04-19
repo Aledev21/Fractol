@@ -2,6 +2,7 @@
 # define FRACTOL_H
 
 # include <mlx.h>
+# include "libft.h"
 # include <stdio.h>
 # include <stdlib.h>
 # include <math.h>
