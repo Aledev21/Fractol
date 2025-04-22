@@ -6,7 +6,7 @@
 /*   By: alessandro <alessandro@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 18:47:36 by alessandro        #+#    #+#             */
-/*   Updated: 2025/04/19 22:04:16 by alessandro       ###   ########.fr       */
+/*   Updated: 2025/04/19 22:44:25 by alessandro       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,8 @@ int main(int argc, char **argv)
     init_mlx(&data);
     
 	mlx_hook(data.win, 2, 1L<<0, handle_key, &data);
-	mlx_hook(data.win, 4, 1L<<2, handle_mouse, &data);
-	mlx_hook(data.win, 17, 0, close_window, &data);
+    mlx_mouse_hook(data.win, handle_mouse, &data);
+    mlx_hook(data.win, 17, 0, close_window, &data);
     
     render(&data);
     mlx_loop(data.mlx);

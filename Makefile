@@ -1,5 +1,5 @@
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -O3
+CFLAGS = -Wall -Wextra -Werror -O3 -flto -march=native
 INCLUDES = -Iincludes -Iincludes/minilibx-linux -Iincludes/Libft
 LIBS = -Lincludes/Libft -lft -Lincludes/minilibx-linux -lmlx -lX11 -lXext -lm
 
@@ -21,7 +21,8 @@ SRC = \
     src/fractals/burningship.c \
     src/utils/errors.c \
     src/utils/init.c \
-    src/utils/math_utils.c
+    src/utils/math_utils.c\
+    
 
 OBJ = $(SRC:%.c=%.o)
 NAME = fractol
