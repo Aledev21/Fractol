@@ -8,6 +8,13 @@
 # include <stdio.h>
 
 
+
+# define KEY_LEFT   123
+# define KEY_RIGHT  124
+# define KEY_UP     126
+# define KEY_DOWN   125
+# define KEY_ESC    53
+
 # define WIDTH 800
 # define HEIGHT 800
 # define MAX_ITER 100
@@ -50,7 +57,7 @@ void    print_help(void);
 void    exit_error(char *msg);
 void    init_mlx(t_data *data);
 void    render(t_data *data);
-int get_color(int iter, int max_iter);
+int     get_color(int iter, int max_iter);
 void    put_pixel(t_data *data, int x, int y, int color);
 int     handle_key(int key, t_data *data);
 int     handle_mouse(int button, int x, int y, t_data *data);
