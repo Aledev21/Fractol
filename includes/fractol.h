@@ -9,16 +9,15 @@
 
 
 
-# define KEY_LEFT   123
-# define KEY_RIGHT  124
-# define KEY_UP     126
-# define KEY_DOWN   125
-# define KEY_ESC    53
+# define KEY_ESC    65307
+# define KEY_LEFT   65361
+# define KEY_RIGHT  65363
+# define KEY_UP     65362
+# define KEY_DOWN   65364
 
 # define WIDTH 800
 # define HEIGHT 800
 # define MAX_ITER 100
-# define ESC 53
 # define MOUSE_UP 4
 # define MOUSE_DOWN 5
 # define ZOOM_FACTOR 1.2
@@ -55,7 +54,7 @@ double  ft_atof(char *str);
 void    init_defaults(t_data *data);
 void    print_help(void);
 void    exit_error(char *msg);
-void    init_mlx(t_data *data);
+int     init_mlx(t_data *data);
 void    render(t_data *data);
 int     get_color(int iter, int max_iter);
 void    put_pixel(t_data *data, int x, int y, int color);
@@ -68,6 +67,7 @@ void    burningship(t_data *data, int x, int y);
 void    update_fractal_limits(t_data *data);
 void    screen_to_world(t_data *data, int x, int y, double *world_x, double *world_y);
 void    free_all(t_data *data);
+void init_mlx_safe(t_data *data);
 
 
 #endif
