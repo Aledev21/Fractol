@@ -67,5 +67,7 @@ void    julia(t_data *data, int x, int y);
 void    burningship(t_data *data, int x, int y);
 void    update_fractal_limits(t_data *data);
 void    screen_to_world(t_data *data, int x, int y, double *world_x, double *world_y);
+void    free_all(t_data *data);
+
 
 #endif
